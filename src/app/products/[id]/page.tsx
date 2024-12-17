@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useCart } from '../../context/CartContext'; // Importando o contexto do carrinho
 import { useState } from 'react';
 
@@ -52,8 +53,9 @@ const ProductDetailPage = () => {
         onClick={handleGoBack}
         className="mb-6 text-green-600 hover:text-green-800 flex items-center"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 mr-2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+          strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
         </svg>
         Voltar
       </button>
@@ -61,10 +63,10 @@ const ProductDetailPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Imagem do Produto */}
         <div className="relative w-full h-96">
-          <img
+          <Image
             src={product.image}
             alt={product.title}
-            crossOrigin="anonymous"
+            layout="fill"
             className="object-cover rounded-lg shadow-lg"
           />
         </div>

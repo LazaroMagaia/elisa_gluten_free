@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+
 import Slider from './components/Slider';
 import CardSection from './components/Card';
 import AboutUsSection from './components/About';
