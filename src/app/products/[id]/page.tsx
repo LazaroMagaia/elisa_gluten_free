@@ -2,7 +2,6 @@
 
 import { useCart } from '../../context/CartContext'; // Importando o contexto do carrinho
 import { useState } from 'react';
-import Image from 'next/image';
 
 // Componente da página de detalhes do produto
 const ProductDetailPage = () => {
